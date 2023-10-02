@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { DataSourceOptions } from 'typeorm';
 import { Course } from '../courses/entities/course.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Tag } from "../courses/entities/tag.entity";
+import { Tag } from '../courses/entities/tag.entity';
 
 export const dataSourceOptions: DataSourceOptions = {
   type: 'postgres',
@@ -12,7 +12,7 @@ export const dataSourceOptions: DataSourceOptions = {
   password: 'docker',
   database: 'postgres',
   entities: [Course, Tag],
-  synchronize: true,
+  synchronize: false,
 };
 
 @Module({
